@@ -68,9 +68,9 @@ body {
 }
 
 .hero-logo img {
-  max-height: 380px;
-  width: auto;
   max-width: 100%;
+  height: auto;
+  max-height: 340px;
 }
 
 .hero-logo-wrap {
