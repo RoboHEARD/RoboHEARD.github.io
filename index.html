@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RoboHEARD 2027: Robot-centric Embodied Hearing and Dialogue for Multi-Speaker Audio-Visual Speech Recognition. A satellite challenge of IEEE ICASSP 2027.">
+  <title>RoboHEARD 2027 Challenge</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="page-top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top">RoboHEARD <span class="brand-year">2027</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#data">Data</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tracks">Tracks</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#baselines">Baselines</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#evaluation">Evaluation</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#rules">Rules</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organizers">Organizers</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sponsors">Sponsor</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="masthead" id="top">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="hero-badges">
+            <span class="badge badge-conf"><i class="fa-solid fa-microphone-lines"></i> A Satellite Challenge of <strong>IEEE ICASSP 2027</strong></span>
+          </div>
+          <h1 class="hero-title">RoboHEARD 2027</h1>
+          <h2 class="hero-subtitle">Robot-centric Embodied Hearing and Dialogue for<br>Multi-Speaker Audio-Visual Speech Recognition</h2>
+          <p class="hero-tagline">Who spoke, when they spoke, and what they said — in real multi-speaker human-robot interaction, perceived through the sensors of a real mobile robot.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light btn-lg" href="#register"><i class="fa-solid fa-user-plus"></i> Register</a>
+            <a class="btn btn-outline-light btn-lg" href="#introduction"><i class="fa-solid fa-book-open"></i> Introduction</a>
+            <a class="btn btn-outline-light btn-lg" href="#leaderboard"><i class="fa-solid fa-ranking-star"></i> Leaderboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- News -->
+  <section class="section-section" id="news">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">News</h2>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <div class="news-date">Aug 21, 2026 (AoE)</div>
+          <div class="news-body">
+            <span class="badge badge-complete">Challenge Accepted</span>
+            Our proposal for the <strong>RoboHEARD 2027 Challenge</strong> has been officially accepted as a satellite challenge of <strong>IEEE ICASSP 2027</strong>. Stay tuned for the challenge launch on <strong>September 15, 2026</strong>.
+          </div>
+        </li>
+        <li class="news-item">
+          <div class="news-date">Coming Soon</div>
+          <div class="news-body">
+            Registration is scheduled to open shortly after the challenge launch (<strong>September 15, 2026</strong>). Download links for the development data and baseline systems will be released on <strong>October 15, 2026</strong>.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section-section bg-light" id="introduction">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Introduction</h2>
+      </div>
+      <p>
+        As service robots are increasingly deployed in applications such as companionship, elderly care,
+        domestic assistance, navigation, and shopping guidance, natural and robust human-robot interaction (HRI)
+        is becoming increasingly important. <strong>RoboHEARD 2027</strong> focuses on multimodal perception for
+        mobile service robots in two representative scenarios: <em>home companionship</em> and
+        <em>navigation / shopping assistance</em>.
+      </p>
+      <p>
+        The core task is <strong>multi-speaker audio-visual speech recognition</strong> in real robot-centered
+        interaction environments. During robot movement and service delivery, participants use data collected
+        from the robot's onboard multimodal sensors — including microphone arrays, multiple cameras with different
+        viewing angles, LiDAR, and other sensors — to determine <strong>who spoke, when they spoke, and what they said</strong>
+        in multi-speaker conversational scenes.
+      </p>
+
+      <h3 class="subsection-title">What makes this challenge new</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+              <h5 class="card-title">Real Sensor Data</h5>
+              <p class="card-text">Data are collected using real sensors mounted on actual mobile robots in real-world service scenarios, rather than simulated data or wearable devices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="feature-icon"><i class="fa-solid fa-server"></i></div>
+              <h5 class="card-title">Heterogeneous Multimodal Fusion</h5>
+              <p class="card-text">Inputs come from heterogeneous robot-mounted sensors: microphone arrays, multi-view cameras, and LiDAR — richer but more complex perception cues.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+              <h5 class="card-title">Spontaneous, Overlapping Speech</h5>
+              <p class="card-text">Realistic multi-speaker human-robot interaction — home companionship and navigation/shopping — where conversations are spontaneous, overlapping, and context-dependent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="feature-icon"><i class="fa-solid fa-person-walking-with-cane"></i></div>
+              <h5 class="card-title">Dynamic Positions &amp; Ego-Noise</h5>
+              <p class="card-text">Both speakers and the robot continuously move, changing positions, orientations, and spatial relationships. Robot motion introduces ego-noise — motor noise and motion-related acoustic interference.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info mt-4" role="alert">
+        <i class="fa-solid fa-bullseye me-2"></i>
+        <strong>Goal:</strong> Address new scientific and technical problems in multi-speaker audio-visual speech recognition, speaker attribution, multimodal fusion, and robot-centered perception — and advance signal processing that can be deployed on real mobile robots.
+      </div>
+    </div>
+  </section>
+
+  <!-- Data -->
+  <section class="section-section" id="data">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Data</h2>
+      </div>
+      <p>
+        The dataset is collected from the <strong>QUANTA X2</strong> robot (or its newer model) by
+        <a href="https://x2robot.com/en/product/quantum2" target="_blank" rel="noopener">X Square Robot</a>.
+        Over <strong>100 conversations</strong> were recorded in two scenarios — <em>home companionship</em> and
+        <em>navigation / shopping guidance</em>. Each session lasts approximately 5–8 minutes and involves
+        <strong>3–6 human participants</strong> who move along with the robot following predefined scripts.
+      </p>
+
+      <div class="row">
+        <div class="col-lg-5">
+          <figure class="figure mb-4">
+            <img src="assets/img/robot.png" class="figure-img img-fluid rounded img-robot" alt="The QUANTA X2 robot">
+            <figcaption class="figure-caption text-center"><span class="fig-label">Fig 1.</span> The QUANTA X2 robot.</figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-7">
+          <h3 class="subsection-title">Corpus Overview</h3>
+          <p>In total, the speech corpus amounts to <strong>about 60 hours of audio</strong>, divided into strict speaker- and environment-disjoint splits:</p>
+          <div class="row text-center g-3 mb-4">
+            <div class="col-4"><div class="split-box"><div class="split-num">30<small>h</small></div><div class="split-label">Training</div></div></div>
+            <div class="col-4"><div class="split-box"><div class="split-num">10<small>h</small></div><div class="split-label">Development</div></div></div>
+            <div class="col-4"><div class="split-box"><div class="split-num">20<small>h</small></div><div class="split-label">Test</div></div></div>
+          </div>
+
+          <h3 class="subsection-title">Sensor Specifications</h3>
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr><th>Modality</th><th>Configuration</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fa-solid fa-microphone-lines me-1"></i><strong>Audio</strong></td>
+                  <td>Circular microphone array, 6 microphones, 7 cm diameter, 16 kHz, 16-bit</td>
+                </tr>
+                <tr>
+                  <td><i class="fa-solid fa-video me-1"></i><strong>Vision</strong></td>
+                  <td><strong>7 GMSL cameras</strong> + <strong>2 Orbbec RGB-D cameras</strong></td>
+                </tr>
+                <tr>
+                  <td><i class="fa-solid fa-satellite-dish me-1"></i><strong>LiDAR</strong></td>
+                  <td>3D LiDAR on chassis — environmental perception &amp; localization</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Camera Layout</h3>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Head (front)</span><span class="cam-detail">Stereo RGB GMSL × 2 · 1600×1300 · 30 Hz</span></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Head (rear)</span><span class="cam-detail">Single RGB GMSL × 2 · bird's-eye · 1600×1300 · 30 Hz</span></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Each wrist</span><span class="cam-detail">Single RGB GMSL × 2 (per wrist) · 1600×1300 · 30 Hz</span></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Lower back</span><span class="cam-detail">Single RGB GMSL × 1 · 1600×1300 · 30 Hz</span></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Chest</span><span class="cam-detail">RGB-D × 1 · 640×480 · 10 Hz</span></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="cam-box"><span class="cam-name">Chassis (front)</span><span class="cam-detail">RGB-D × 1 · 640×480 · 10 Hz</span></div></div>
+      </div>
+
+      <div class="alert alert-warning mt-4" role="alert">
+        <i class="fa-solid fa-file-shield me-2"></i>
+        All data have undergone rigorous quality control and are released under the
+        <strong>CC BY-NC-SA 4.0</strong> data license.
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks -->
+  <section class="section-section bg-light" id="tracks">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Tracks</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card track-card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Track 1 <span class="track-badge">Offline</span></h4>
+              <h5 class="track-sub">Multi-speaker time-stamped AVSR (offline)</h5>
+              <p>Recognize <strong>who spoke, when they spoke, and what they said</strong> in multi-speaker conversational scenes from the robot's onboard sensors, under the <strong>offline</strong> mode with full-utterance access.</p>
+              <ul class="track-list">
+                <li><i class="fa-solid fa-check-circle"></i> Full-context inference, no latency constraint</li>
+                <li><i class="fa-solid fa-check-circle"></i> Metric: time-constrained minimum permutation CER (tcpCER)</li>
+              </ul>
+              <div class="track-metric"><span class="label">Metric</span><span class="value">tcpCER</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card track-card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Track 2 <span class="track-badge">Online</span></h4>
+              <h5 class="track-sub">Multi-speaker time-stamped AVSR (online)</h5>
+              <p>Recognize <strong>who spoke, when they spoke, and what they said</strong> in multi-speaker conversational scenes from the robot's onboard sensors, under the <strong>online</strong> (streaming) mode.</p>
+              <ul class="track-list">
+                <li><i class="fa-solid fa-clock"></i> Mean End Delay latency limited to <strong>2 seconds</strong> on a single 5090 GPU</li>
+                <li><i class="fa-solid fa-check-circle"></i> Metric: tcpCER (only latency-compliant solutions are ranked)</li>
+              </ul>
+              <div class="track-metric"><span class="label">Metric</span><span class="value">tcpCER + MED ≤ 2s</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Baselines -->
+  <section class="section-section" id="baselines">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Baselines</h2>
+      </div>
+      <p>The organizers will provide an open-source baseline system for each track, released together with the development data on <strong>October 15, 2026</strong>.</p>
+      <div class="alert alert-info" role="alert">
+        <i class="fa-solid fa-hourglass-half me-2"></i>
+        Baseline systems are being finalized and will be announced on <strong>October 15, 2026</strong>. Please check back here for the released baselines and checkpoints.
+      </div>
+    </div>
+  </section>
+
+  <!-- Evaluation -->
+  <section class="section-section bg-light" id="evaluation">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Evaluation</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card metric-card h-100">
+            <div class="card-body">
+              <div class="metric-icon"><i class="fa-solid fa-percent"></i></div>
+              <h5 class="card-title">tcpCER</h5>
+              <p class="card-text"><strong>Time-constrained minimum permutation Character Error Rate</strong>. The primary metric for both tracks, measuring how accurately the system recognizes <em>who spoke, when they spoke, and what they said</em> as time-stamped multi-speaker transcriptions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card metric-card h-100">
+            <div class="card-body">
+              <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
+              <h5 class="card-title">Mean End Delay (Track 2)</h5>
+              <p class="card-text">An alignment-based latency metric for streaming ASR measuring system responsiveness at the <strong>end of each utterance</strong>. The difference between the system's predicted final-word timestamp and the reference end timestamp (via forced alignment).</p>
+              <div class="alert alert-warning mb-0 mt-2"><i class="fa-solid fa-gauge-high me-1"></i>Track 2 solutions must achieve a Mean End Delay <strong>≤ 2 seconds</strong> to be eligible for ranking.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title mt-5">Latency Validation (Track 2)</h3>
+      <div class="card-info">
+        <p>Latency is measured on an in-house GPU server with NVIDIA <strong>5090</strong> cards. The latency test runs from <strong>December 7–22, 2026</strong>, after the leaderboard freeze. Participants submit a <strong>Docker container</strong>.</p>
+        <ul class="track-list">
+          <li><i class="fa-solid fa-circle-exclamation"></i> The latency test is <strong>mandatory</strong> for the top-5 performing teams; other teams are encouraged to participate.</li>
+          <li><i class="fa-solid fa-shield-halved"></i> Inference models/codes in the Docker are <strong>removed</strong> after validation and used only for this purpose.</li>
+        </ul>
+        <p class="mb-0">The latency test submission for Track 2 runs from <strong>December 7 to December 22, 2026</strong>, after the leaderboard freeze deadline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard -->
+  <section class="section-section" id="leaderboard">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Leaderboard</h2>
+      </div>
+      <p>
+        We will use <strong>Codabench</strong> as the main host for results submission and leaderboard demonstrations.
+        The leaderboard will open after the release of the test sets on <strong>December 1, 2026</strong>.
+      </p>
+      <p class="mb-0">
+        <a class="btn btn-primary btn-lg disabled" href="#leaderboard"><i class="fa-solid fa-ranking-star me-1"></i>Leaderboard (opening soon)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section-section bg-light" id="timeline">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Timeline</h2>
+      </div>
+      <p class="text-muted">All times follow the official challenge announcement unless stated otherwise.</p>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <ul class="timeline">
+            <li class="timeline-item completed">
+              <div class="timeline-date">July 27, 2026</div>
+              <div class="timeline-title">Proposal Submission Deadline <span class="badge badge-complete">Completed</span></div>
+            </li>
+            <li class="timeline-item completed">
+              <div class="timeline-date">August 21, 2026</div>
+              <div class="timeline-title">Proposal Acceptance Notification <span class="badge badge-complete">Completed</span></div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">September 15, 2026</div>
+              <div class="timeline-title">Launch of the Challenge</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">October 15, 2026</div>
+              <div class="timeline-title">Development Data &amp; Baseline Systems Release</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">November 15, 2026</div>
+              <div class="timeline-title">Registration Deadline · List of Allowed Data &amp; Pre-trained Models Released</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 1, 2026</div>
+              <div class="timeline-title">Test Sets &amp; Leaderboard Release</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 7, 2026</div>
+              <div class="timeline-title">Leaderboard Freeze · Latency Test Opens</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 15, 2026</div>
+              <div class="timeline-title">Technical Report Submission</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 22, 2026</div>
+              <div class="timeline-title">Latency Test Submission (Track 2)</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 30, 2026</div>
+              <div class="timeline-title">Official Ranking Released</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">January 07, 2027</div>
+              <div class="timeline-title">2-page Papers Due (by invitation only)</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">January 21, 2027</div>
+              <div class="timeline-title">2-page Paper Acceptance Notification</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">January 28, 2027</div>
+              <div class="timeline-title">Camera-ready 2-page Papers Due</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register -->
+  <section class="section-section" id="register">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Registration</h2>
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <i class="fa-solid fa-hourglass-half me-2"></i>
+        Registration opens at the challenge launch on <strong>September 15, 2026</strong> and closes on <strong>November 15, 2026</strong>.
+      </div>
+      <p>
+        Please register via the Google Form below. We will send you a successful registration email, along with
+        dataset access, shortly after registration.
+      </p>
+      <p class="mb-0">
+        <a class="btn btn-primary btn-lg" href="#register" onclick="alert('Registration form link to be provided.'); return false;"><i class="fa-solid fa-user-plus me-1"></i>Registration Form (coming soon)</a>
+      </p>
+
+      <h3 class="subsection-title">Data &amp; Model Declaration</h3>
+      <div class="card-info">
+        <p>
+          Participants must <strong>declare</strong> the datasets and models/tools they intend to use to the organizers
+          before <strong>November 15, 2026</strong> (the registration deadline). All data sources and checkpoints must be
+          clearly documented in the system description with appropriate citations or links.
+        </p>
+        <p class="mb-0">
+          After collecting this information, we will compile and release a full list to all participants to ensure
+          transparency and a fair, reproducible evaluation environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="section-section bg-light" id="rules">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Rules</h2>
+      </div>
+
+      <h3 class="subsection-title">Training Data &amp; Pre-trained Models</h3>
+      <ul class="custom-list">
+        <li>Participants may use any <strong>open-source datasets</strong> for training, as well as pre-trained models, provided that data and models are openly and freely accessible.</li>
+        <li>(1) Data and models must be <strong>reported to the organizers</strong> before the specified deadline (November 15, 2026), and (2) all data sources and checkpoints must be clearly documented in the system description with citations or links.</li>
+        <li>The official training, development, and test splits follow the strict speaker- and environment-disjoint partitions described in the <a href="#data">Data</a> section.</li>
+      </ul>
+
+      <h3 class="subsection-title">Submission</h3>
+      <div class="table-responsive">
+        <table class="table table-striped align-middle">
+          <thead><tr><th>Track</th><th>Mode</th><th>Key Requirement</th></tr></thead>
+          <tbody>
+            <tr><td>Track 1</td><td>Offline</td><td>Full-context inference; no latency constraint</td></tr>
+            <tr><td>Track 2</td><td>Online</td><td>Streaming; Mean End Delay ≤ 2 seconds on a single 5090 GPU</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mb-0 text-muted">Verification of the latency requirement for the online track is mandatory for the top-5 performing teams via Docker containers on a provided password-enabled GPU server.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1c" aria-expanded="true" aria-controls="faq1c">
+              What data can I use for training?
+            </button>
+          </h2>
+          <div id="faq1c" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Participants may use any openly available datasets for model training, as well as pre-trained models, provided they are openly and freely accessible and are reported to the organizers before November 15, 2026. All data sources and checkpoints must be documented in the system description.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2c" aria-expanded="false" aria-controls="faq2c">
+              Can I participate in both tracks?
+            </button>
+          </h2>
+          <div id="faq2c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. The challenge offers two tracks (offline and online). Participants may submit results for one or both tracks.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3c" aria-expanded="false" aria-controls="faq3c">
+              How is latency validated for the online track?
+            </button>
+          </h2>
+          <div id="faq3c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Latency is measured on an in-house GPU server with NVIDIA 5090 cards using the Mean End Delay (MED) metric. The latency test runs from December 7–22, 2026. It is mandatory for the top-5 teams, and participants submit a Docker container that is removed after validation.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4c" aria-expanded="false" aria-controls="faq4c">
+              Where are results submitted?
+            </button>
+          </h2>
+          <div id="faq4c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">We use <strong>Codabench</strong> as the main host for results submission and leaderboard demonstrations.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section-section bg-light" id="awards">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Awards</h2>
+      </div>
+      <p class="text-center mb-4">Each track awards cash prizes to the top three teams, with official certificates presented during the <strong>ICASSP 2027 Challenge Session</strong>.</p>
+      <div class="row text-center g-3">
+        <div class="col-md-4"><div class="award-box award-gold"><div class="award-title"><i class="fa-solid fa-medal"></i> 1st Place</div><div class="award-amount">$1,000</div></div></div>
+        <div class="col-md-4"><div class="award-box award-silver"><div class="award-title"><i class="fa-solid fa-medal"></i> 2nd Place</div><div class="award-amount">$500</div></div></div>
+        <div class="col-md-4"><div class="award-box award-bronze"><div class="award-title"><i class="fa-solid fa-medal"></i> 3rd Place</div><div class="award-amount">$300</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section class="section-section" id="sponsors">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Sponsor</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="sponsor-card text-center">
+            <div class="sponsor-logo"><i class="fa-solid fa-robot"></i></div>
+            <div class="sponsor-name"><a href="https://x2robot.com/en" target="_blank" rel="noopener">X Square Robot</a></div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center mt-5 mb-0">The RoboHEARD 2027 Challenge is sponsored by <strong>X Square Robot</strong>, a robotics company dedicated to building embodied intelligence. As our sponsor, they open the <strong>QUANTA X2</strong> robot platform used to collect the RoboHEARD 2027 dataset, support the cash awards for the winning teams, and provide <strong>NVIDIA 5090 GPU servers</strong> for the online latency testing.</p>
+    </div>
+  </section>
+
+  <!-- Organizers -->
+  <section class="section-section" id="organizers">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Organizers</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://smiip-mli.github.io/" target="_blank" rel="noopener">Ming Li</a></div><div class="org-affil">Chinese University of Hong Kong, Shenzhen</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://people.ucas.ac.cn/~0046243?language=en" target="_blank" rel="noopener">Pengyuan Zhang</a></div><div class="org-affil">Chinese Academy of Sciences</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://sites.google.com/view/kongaiklee" target="_blank" rel="noopener">Kong Aik Lee</a></div><div class="org-affil">The Hong Kong Polytechnic University</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://speech.ee.ntu.edu.tw/~hylee/index.php" target="_blank" rel="noopener">Hung-yi Lee</a></div><div class="org-affil">National Taiwan University</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://homepage.citi.sinica.edu.tw/pages/yu.tsao/" target="_blank" rel="noopener">Yu Tsao</a></div><div class="org-affil">Academia Sinica</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://scholar.google.com/citations?user=eJT2LSAAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Hui Bu</a></div><div class="org-affil">AISHELL</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://sites.google.com/view/kaizhu-huang-homepage" target="_blank" rel="noopener">Kaizhu Huang</a></div><div class="org-affil">Duke Kunshan University</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://xiaoxiaomiao323.github.io/" target="_blank" rel="noopener">Xiaoxiao Miao</a></div><div class="org-affil">Duke Kunshan University</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://tiantiaf0627.github.io/" target="_blank" rel="noopener">Tiantian Feng</a></div><div class="org-affil">Chinese University of Hong Kong, Shenzhen</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://x2robot.com/en" target="_blank" rel="noopener">Xiaoyi Qin</a></div><div class="org-affil">X Square Robot</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://x2robot.com/en" target="_blank" rel="noopener">Ruyi Gan</a></div><div class="org-affil">X Square Robot</div></div></div>
+        <div class="col-sm-6 col-md-4 col-lg-3"><div class="org-card"><div class="org-avatar"><i class="fa-solid fa-user-tie"></i></div><div class="org-name"><a href="https://x2robot.com/en" target="_blank" rel="noopener">Hao Wang</a></div><div class="org-affil">X Square Robot</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section-section bg-light" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <p class="text-center">For any questions or inquiries, please feel free to reach out to us.</p>
+      <div class="contact-box text-center">
+        <a href="mailto:roboheard.challenge@gmail.com" class="btn btn-primary btn-lg"><i class="fa-solid fa-envelope me-1"></i>roboheard.challenge@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-0">Copyright © 2026 RoboHEARD 2027 Challenge</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
