@@ -63,6 +63,17 @@ body {
   position: relative;
 }
 
+.hero-logo {
+  margin-bottom: 22px;
+}
+
+.hero-logo img {
+  max-height: 170px;
+  width: auto;
+  max-width: 100%;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.35));
+}
+
 .hero-badges {
   margin-bottom: 28px;
 }
