@@ -315,12 +315,12 @@
 
       <h3 class="subsection-title mt-5">Latency Validation (Track 2)</h3>
       <div class="card-info">
-        <p>Latency is measured on an in-house GPU server with NVIDIA <strong>RTX 5090</strong> cards. The latency test runs from <strong>December 7–22, 2026</strong>, after the leaderboard freeze. Participants submit a <strong>Docker container</strong>.</p>
+        <p>Latency is validated on an in-house <strong>NVIDIA RTX 5090</strong> server from <strong>December 7–22, 2026</strong>, after the leaderboard freeze. By default, teams submit a <strong>Docker container</strong> exposing the standardized streaming API, which the organizers run on the 5090 server.</p>
         <ul class="track-list">
-          <li><i class="fa-solid fa-circle-exclamation"></i> The latency test is <strong>mandatory</strong> for the top-5 performing teams; other teams are encouraged to participate.</li>
-          <li><i class="fa-solid fa-shield-halved"></i> Inference models/codes in the Docker are <strong>removed</strong> after validation and used only for this purpose.</li>
+          <li><i class="fa-solid fa-circle-exclamation"></i> Validation is <strong>mandatory</strong> for the top-5 performing teams; other teams are encouraged to participate.</li>
+          <li><i class="fa-solid fa-server"></i> Teams may alternatively provide a <strong>hosted API endpoint</strong> (on our server or their own). For ranking eligibility, the endpoint must report per-request timing so network overhead can be separated from model latency, and must declare its hardware.</li>
+          <li><i class="fa-solid fa-shield-halved"></i> Inference models/codes are <strong>removed</strong> after validation and used only for this purpose.</li>
         </ul>
-        <p class="mb-0">The latency test submission for Track 2 runs from <strong>December 7 to December 22, 2026</strong>, after the leaderboard freeze deadline.</p>
       </div>
     </div>
   </section>
@@ -466,7 +466,7 @@
           </tbody>
         </table>
       </div>
-      <p class="mb-0 text-muted">Verification of the latency requirement for the online track is mandatory for the top-5 performing teams via Docker containers on a provided password-enabled GPU server.</p>
+      <p class="mb-0 text-muted">Verification of the latency requirement for the online track is mandatory for the top-5 performing teams. By default, teams submit a Docker container exposing the standardized streaming API, which the organizers run on a provided password-enabled GPU server; alternatively, teams may provide a hosted API endpoint with per-request timing and a hardware declaration.</p>
     </div>
   </section>
 
@@ -504,7 +504,7 @@
             </button>
           </h2>
           <div id="faq3c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Latency is measured on an in-house GPU server with NVIDIA RTX 5090 cards using the Endpointing Delay (P95) metric. The latency test runs from December 7–22, 2026. It is mandatory for the top-5 teams, and participants submit a Docker container that is removed after validation.</div>
+            <div class="accordion-body">Latency is validated on an in-house NVIDIA RTX 5090 server using the Endpointing Delay (P95) metric from December 7–22, 2026, and is mandatory for the top-5 teams. By default, teams submit a Docker container exposing the standardized streaming API, which the organizers run on the server; alternatively, teams may provide a hosted API endpoint (on our server or their own). For ranking eligibility, hosted endpoints must report per-request timing so network overhead can be separated from model latency, and must declare their hardware. Submitted code is removed after validation.</div>
           </div>
         </div>
         <div class="accordion-item">
