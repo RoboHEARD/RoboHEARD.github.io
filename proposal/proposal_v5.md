@@ -53,9 +53,9 @@ The core task is multi-speaker audio-visual speech recognition in real
 robot-centered interaction environments. Specifically, during robot
 movement and service delivery, participants are required to use data
 collected from the robot's onboard multimodal sensors-including
-microphone arrays, multiple cameras with different viewing angles,
-LiDAR, and other sensors-to determine **who spoke, when they spoke, and
-what they said** in multi-speaker conversational scenes.
+microphone arrays and multiple cameras with different viewing
+angles-to determine **who spoke, when they spoke, and
+what they said** in multi-speaker conversational scenes.
 
 Compared with previous multi-speaker speech recognition challenges, this
 challenge introduces several new and practical research problems. First,
@@ -63,8 +63,8 @@ the data are collected using real sensors mounted on actual mobile
 robots in environments designed to resemble real-world service
 scenarios, rather than relying on simulated data or wearable devices.
 Second, the multimodal input signals come from heterogeneous
-robot-mounted sensors, including microphone arrays, multi-view cameras,
-and LiDAR, providing richer but more complex perception cues. Third, the
+robot-mounted sensors, including microphone arrays and multi-view
+cameras, providing richer but more complex perception cues. Third, the
 challenge focuses on realistic multi-speaker human--robot interaction
 scenarios, such as home companionship and navigation/shopping guidance,
 where conversations are often spontaneous, overlapping, and
@@ -165,10 +165,6 @@ any overlap. The sensor specifications are as follows:
   - Chest: one RGB‑D camera, resolution 640×480, 10 Hz.
 
   - Front of chassis: one RGB‑D camera, resolution 640×480, 10 Hz.
-
-- **Lidar**: A 3D LiDAR sensor is mounted on the chassis; although it
-  does not capture human subjects, it provides environmental perception
-  and localization information.
 
 > All data have undergone rigorous quality control, and the **CC
 > BY-NC-SA 4.0** data licenses are provided alongside the dataset.
