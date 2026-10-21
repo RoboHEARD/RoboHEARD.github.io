@@ -223,6 +223,13 @@ body {
   font-weight: 600;
 }
 
+.badge-update {
+  background: #fff4d6;
+  color: #9a6400;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 /* ---------- Feature / cards ---------- */
 .feature-card,
 .track-card,

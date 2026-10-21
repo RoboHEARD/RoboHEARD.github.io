@@ -75,6 +75,13 @@
       </div>
       <ul class="news-list">
         <li class="news-item">
+          <div class="news-date">Oct 21, 2026 (AoE)</div>
+          <div class="news-body">
+            <span class="badge badge-update">Timeline Update</span>
+            Due to newly identified issues in the <strong>video data</strong>, the data release schedule has been postponed. Download links for the <strong>training data</strong> will be released on <strong>October 23, 2026</strong>, and download links for the <strong>development data</strong> together with the <strong>GitHub link of the baseline methods</strong> will be released on <strong>October 30, 2026</strong>. We sincerely apologize for the delay and thank you for your patience. Please refer to the updated <a href="#timeline">Timeline</a>.
+          </div>
+        </li>
+        <li class="news-item">
           <div class="news-date">Aug 21, 2026 (AoE)</div>
           <div class="news-body">
             <span class="badge badge-complete">Challenge Accepted</span>
@@ -84,7 +91,7 @@
         <li class="news-item">
           <div class="news-date">Now Open</div>
           <div class="news-body">
-            Registration is now open and closes on <strong>November 15, 2026</strong>. Download links for the development data and baseline systems will be released on <strong>October 15, 2026</strong>.
+            Registration is now open and closes on <strong>November 30, 2026</strong>. Download links for the training data will be released on <strong>October 23, 2026</strong>, and for the development data and baseline systems on <strong>October 30, 2026</strong>.
           </div>
         </li>
       </ul>
@@ -215,6 +222,11 @@
         All data have undergone rigorous quality control and are released under the
         <strong>CC BY-NC-SA 4.0</strong> data license.
       </div>
+
+      <div class="alert alert-info mt-3" role="alert">
+        <i class="fa-solid fa-cloud-arrow-down me-2"></i>
+        Download links for the <strong>training data</strong> will be released on <strong>October 23, 2026</strong>, and for the <strong>development data</strong> on <strong>October 30, 2026</strong>.
+      </div>
     </div>
   </section>
 
@@ -263,10 +275,10 @@
       <div class="section-heading">
         <h2 class="section-title">Baselines</h2>
       </div>
-      <p>The organizers will provide an open-source baseline system for each track, released together with the development data on <strong>October 15, 2026</strong>.</p>
+      <p>The organizers will provide an open-source baseline system for each track, released together with the development data on <strong>October 30, 2026</strong> (GitHub link included).</p>
       <div class="alert alert-info" role="alert">
         <i class="fa-solid fa-hourglass-half me-2"></i>
-        Baseline systems are being finalized and will be announced on <strong>October 15, 2026</strong>. Please check back here for the released baselines and checkpoints.
+        Baseline systems are being finalized and will be announced on <strong>October 30, 2026</strong>. Please check back here for the released baselines and checkpoints.
       </div>
     </div>
   </section>
@@ -301,7 +313,7 @@
 
       <h3 class="subsection-title mt-5">Latency Validation (Track 2)</h3>
       <div class="card-info">
-        <p>Latency is validated on an in-house <strong>NVIDIA RTX 5090</strong> server from <strong>December 7–22, 2026</strong>, after the leaderboard freeze. By default, teams submit a <strong>Docker container</strong> exposing the standardized streaming API, which the organizers run on the 5090 server.</p>
+        <p>Latency is validated on an in-house <strong>NVIDIA RTX 5090</strong> server from <strong>December 21–27, 2026</strong>, after the leaderboard freeze. By default, teams submit a <strong>Docker container</strong> exposing the standardized streaming API, which the organizers run on the 5090 server.</p>
         <ul class="track-list">
           <li><i class="fa-solid fa-circle-exclamation"></i> Validation is <strong>mandatory</strong> for the top-5 performing teams; other teams are encouraged to participate.</li>
           <li><i class="fa-solid fa-server"></i> Teams may alternatively provide a <strong>hosted API endpoint</strong> (on our server or their own). For ranking eligibility, the endpoint must report per-request timing so network overhead can be separated from model latency, and must declare its hardware.</li>
@@ -319,7 +331,7 @@
       </div>
       <p>
         We will use <strong>Codabench</strong> as the main host for results submission and leaderboard demonstrations.
-        The leaderboard will open after the release of the test sets on <strong>December 1, 2026</strong>.
+        The leaderboard will open after the release of the test sets on <strong>December 15, 2026</strong>.
       </p>
       <p class="mb-0">
         <a class="btn btn-primary btn-lg disabled" href="#leaderboard"><i class="fa-solid fa-ranking-star me-1"></i>Leaderboard (opening soon)</a>
@@ -350,27 +362,35 @@
               <div class="timeline-title">Launch of the Challenge <span class="badge badge-complete">Completed</span></div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-date">October 15, 2026</div>
+              <div class="timeline-date">October 23, 2026</div>
+              <div class="timeline-title">Training Data Release</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">October 30, 2026</div>
               <div class="timeline-title">Development Data &amp; Baseline Systems Release</div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-date">November 15, 2026</div>
-              <div class="timeline-title">Registration Deadline · List of Allowed Data &amp; Pre-trained Models Released</div>
+              <div class="timeline-date">November 30, 2026</div>
+              <div class="timeline-title">Registration Deadline</div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-date">December 1, 2026</div>
-              <div class="timeline-title">Test Sets &amp; Leaderboard Release</div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-date">December 7, 2026</div>
-              <div class="timeline-title">Leaderboard Freeze · Latency Test Opens</div>
+              <div class="timeline-date">November 30, 2026</div>
+              <div class="timeline-title">List of Allowed Data &amp; Pre-trained Models Released</div>
             </li>
             <li class="timeline-item">
               <div class="timeline-date">December 15, 2026</div>
+              <div class="timeline-title">Test Sets &amp; Leaderboard Release</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 21, 2026</div>
+              <div class="timeline-title">Leaderboard Freeze</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-date">December 25, 2026</div>
               <div class="timeline-title">Technical Report Submission</div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-date">December 22, 2026</div>
+              <div class="timeline-date">December 27, 2026</div>
               <div class="timeline-title">Latency Test Submission (Track 2)</div>
             </li>
             <li class="timeline-item">
@@ -403,7 +423,7 @@
       </div>
       <div class="alert alert-warning" role="alert">
         <i class="fa-solid fa-hourglass-half me-2"></i>
-        Registration is now open and closes on <strong>November 15, 2026</strong>.
+        Registration is now open and closes on <strong>November 30, 2026</strong>.
       </div>
       <p>
         Please register via the Google Form below. We will send you a successful registration email, along with
@@ -417,7 +437,7 @@
       <div class="card-info">
         <p>
           Participants must <strong>declare</strong> the datasets and models/tools they intend to use to the organizers
-          before <strong>November 15, 2026</strong> (the registration deadline). All data sources and checkpoints must be
+          before <strong>November 30, 2026</strong> (the registration deadline). All data sources and checkpoints must be
           clearly documented in the system description with appropriate citations or links.
         </p>
         <p class="mb-0">
@@ -438,7 +458,7 @@
       <h3 class="subsection-title">Training Data &amp; Pre-trained Models</h3>
       <ul class="custom-list">
         <li>Participants may use any <strong>open-source datasets</strong> for training, as well as pre-trained models, provided that data and models are openly and freely accessible.</li>
-        <li>(1) Data and models must be <strong>reported to the organizers</strong> before the specified deadline (November 15, 2026), and (2) all data sources and checkpoints must be clearly documented in the system description with citations or links.</li>
+        <li>(1) Data and models must be <strong>reported to the organizers</strong> before the specified deadline (November 30, 2026), and (2) all data sources and checkpoints must be clearly documented in the system description with citations or links.</li>
         <li>The official training, development, and test splits follow the strict speaker- and environment-disjoint partitions described in the <a href="#data">Data</a> section.</li>
       </ul>
 
@@ -470,7 +490,7 @@
             </button>
           </h2>
           <div id="faq1c" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Participants may use any openly available datasets for model training, as well as pre-trained models, provided they are openly and freely accessible and are reported to the organizers before November 15, 2026. All data sources and checkpoints must be documented in the system description.</div>
+            <div class="accordion-body">Participants may use any openly available datasets for model training, as well as pre-trained models, provided they are openly and freely accessible and are reported to the organizers before November 30, 2026. All data sources and checkpoints must be documented in the system description.</div>
           </div>
         </div>
         <div class="accordion-item">
@@ -490,7 +510,7 @@
             </button>
           </h2>
           <div id="faq3c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Latency is validated on an in-house NVIDIA RTX 5090 server using the Endpointing Delay (P95) metric from December 7–22, 2026, and is mandatory for the top-5 teams. By default, teams submit a Docker container exposing the standardized streaming API, which the organizers run on the server; alternatively, teams may provide a hosted API endpoint (on our server or their own). For ranking eligibility, hosted endpoints must report per-request timing so network overhead can be separated from model latency, and must declare their hardware. Submitted code is removed after validation.</div>
+            <div class="accordion-body">Latency is validated on an in-house NVIDIA RTX 5090 server using the Endpointing Delay (P95) metric from December 21–27, 2026, and is mandatory for the top-5 teams. By default, teams submit a Docker container exposing the standardized streaming API, which the organizers run on the server; alternatively, teams may provide a hosted API endpoint (on our server or their own). For ranking eligibility, hosted endpoints must report per-request timing so network overhead can be separated from model latency, and must declare their hardware. Submitted code is removed after validation.</div>
           </div>
         </div>
         <div class="accordion-item">
