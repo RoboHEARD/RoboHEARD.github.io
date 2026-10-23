@@ -96,10 +96,11 @@ permutation CER (tcpCER).
 
 Recognize who spoke, when they spoke, and what they said in
 multi-speaker conversational scenes from sensors on a mobile robot under
-the online mode, where the Mean End Delay latency is limited to 2
+the online mode, where the Endpointing Delay (P95) must be no more than
+1.5 seconds and the Time to First Stable Token (TTFT, P95) no more than 4.5
 seconds on a single 5090 GPU card. The Evaluation metrics is also
 time-constrained minimum permutation CER (tcpCER), but only solutions
-satisfying the latency requirement is eligible for the ranking.
+satisfying the latency requirements are eligible for the ranking.
 
 5\. Datasets
 
@@ -177,11 +178,10 @@ the online track, the top 5 best-performing teams will be asked to
 participate in the latency validation on a provided password-enabled GPU
 server. By default, teams submit a Docker container exposing a
 standardized streaming API, which the organizers run on the 5090 server.
-Alternatively, teams may provide a hosted API endpoint (on our server or
-their own), but for ranking eligibility the endpoint must report
-per-request timing so that network overhead can be separated from model
-latency, and must declare its hardware. The inference models/codes will
-be removed after the organizers validate the latency requirement and
+Alternatively, teams may provide a hosted API endpoint running on the
+provided GPU server. All latency measurements are performed on
+organizer-controlled hardware to ensure fair and comparable results. The
+inference models/codes will be removed after the organizers validate the latency requirement and
 will only be used for this purpose.
 
 7\. Latency Test for the online mode
@@ -193,28 +193,34 @@ teams are encouraged to participate as well.
 
 By default, teams submit a Docker container exposing the standardized
 streaming API; the organizers run it on the 5090 server. Teams may
-alternatively provide a hosted API endpoint (on our server or their own),
-but for ranking eligibility the endpoint must report per-request timing
-so that network overhead can be separated from model latency, and must
-declare its hardware. The inference models/codes in the Docker will be
-removed after the organizers validate the latency requirement and will
-only be used for this purpose.
+alternatively provide a hosted API endpoint running on the provided GPU
+server. All latency measurements are performed on organizer-controlled
+hardware. The inference models/codes in the Docker will be removed after the organizers
+validate the latency requirement and will only be used for this purpose.
 
-Mean End Delay (MED) is an alignment‑based evaluation metric for
+Endpointing Delay (ED) is an alignment‑based evaluation metric for
 streaming speech recognition that measures the system\'s responsiveness
 specifically at the end of each utterance. Following the definition in
 prior work \[1\], for every test utterance, we first obtain the
 ground‑truth end timestamp of the last word in the audio signal using a
 forced‑alignment tool (e.g., Qwen3-ForcedAligner-0.6B). Simultaneously,
-we record the system output timestamp at which the ASR model emits the
-final word of that utterance. The per‑utterance end delay is then
-computed as the difference between the predicted end timestamp and the
-reference end timestamp. This MED metric directly reflects the system\'s
-efficiency in detecting utterance boundaries and committing to a final
-output---a critical aspect for interactive applications such as robot
-dialogue systems, where low MED values indicate faster turn‑taking
-decisions and reduced user waiting time. More details about the metrics
-definition can be found in \[1\].
+we record the wall-clock time at which the streaming API returns the
+utterance\'s final transcript with speaker roles. The per‑utterance end
+delay is then computed as the difference between the reference end
+timestamp and the API return time. This metric directly reflects the
+system\'s efficiency in detecting utterance boundaries and committing to
+a final output---a critical aspect for interactive applications such as
+robot dialogue systems, where low delay values indicate faster turn‑taking
+decisions and reduced user waiting time. Time to First Stable Token
+(TTFT) Delay measures the delay between the physical start time of the
+first word (via forced alignment) and the time the streaming API first
+returns that word with its final speaker role and text; if the word is
+revised later, the time of the revision (i.e., when it became stable) is
+used. Both latency metrics are reported as 95th percentiles
+(P95) and are defined in detail in the official evaluation script.
+Ranking remains based on tcpCER, but only systems satisfying ED (P95) ≤
+1.5 seconds and TTFT (P95) ≤ 4.5 seconds on a single RTX 5090 GPU are
+eligible for ranking.
 
 8\. Contingency plan if data collection or compute resources are delayed
 
