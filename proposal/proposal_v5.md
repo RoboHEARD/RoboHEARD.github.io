@@ -97,7 +97,7 @@ permutation CER (tcpCER).
 Recognize who spoke, when they spoke, and what they said in
 multi-speaker conversational scenes from sensors on a mobile robot under
 the online mode, where the Endpointing Delay (P95) must be no more than
-1.5 seconds and the Time to First Stable Token (TTFT, P95) no more than 4.5
+1.5 seconds and the Time to First Stable Token (TTFST, P95) no more than 4.5
 seconds on a single 5090 GPU card. The Evaluation metrics is also
 time-constrained minimum permutation CER (tcpCER), but only solutions
 satisfying the latency requirements are eligible for the ranking.
@@ -212,14 +212,14 @@ system\'s efficiency in detecting utterance boundaries and committing to
 a final output---a critical aspect for interactive applications such as
 robot dialogue systems, where low delay values indicate faster turn‑taking
 decisions and reduced user waiting time. Time to First Stable Token
-(TTFT) Delay measures the delay between the physical start time of the
+(TTFST) Delay measures the delay between the physical start time of the
 first word (via forced alignment) and the time the streaming API first
 returns that word with its final speaker role and text; if the word is
 revised later, the time of the revision (i.e., when it became stable) is
 used. Both latency metrics are reported as 95th percentiles
 (P95) and are defined in detail in the official evaluation script.
 Ranking remains based on tcpCER, but only systems satisfying ED (P95) ≤
-1.5 seconds and TTFT (P95) ≤ 4.5 seconds on a single RTX 5090 GPU are
+1.5 seconds and TTFST (P95) ≤ 4.5 seconds on a single RTX 5090 GPU are
 eligible for ranking.
 
 8\. Contingency plan if data collection or compute resources are delayed
